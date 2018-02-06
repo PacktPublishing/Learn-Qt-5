@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>AnchorsDemo.qml</file>
+        <file>SizingDemo.qml</file>
+    </qresource>
+</RCC>

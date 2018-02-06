@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file alias="qmldir">assets/qmldir</file>
+        <file alias="Style.qml">assets/Style.qml</file>
+        <file alias="fontawesome.ttf">assets/fontawesome-webfont.ttf</file>
+        <file alias="packt-logo-500x500">assets/packt-logo-500x500.jpg</file>
+    </qresource>
+</RCC>

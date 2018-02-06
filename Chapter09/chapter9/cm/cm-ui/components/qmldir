@@ -1,0 +1,15 @@
+module components
+NavigationButton 1.0 NavigationButton.qml
+NavigationBar 1.0 NavigationBar.qml
+CommandButton 1.0 CommandButton.qml
+CommandBar 1.0 CommandBar.qml
+StringEditorSingleLine 1.0 StringEditorSingleLine.qml
+Panel 1.0 Panel.qml
+AddressEditor 1.0 AddressEditor.qml
+SearchResultDelegate 1.0 SearchResultDelegate.qml
+RssItemDelegate 1.0 RssItemDelegate.qml
+EnumeratorSelectorView 1.0 EnumeratorSelectorView.qml
+EnumeratorSelector 1.0 EnumeratorSelector.qml
+FormButton 1.0 FormButton.qml
+ContactDelegate 1.0 ContactDelegate.qml
+ContactsEditor 1.0 ContactsEditor.qml

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="18" name="cm::data::DateTimeDecoratorTests">
+  <properties>
+    <property value="5.10.0" name="QTestVersion"/>
+    <property value="5.10.0" name="QtVersion"/>
+    <property value="Qt 5.10.0 (i386&#x002D;little_endian&#x002D;ilp32 shared (dynamic) debug build; by GCC 5.3.0)" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="constructor_givenNoParameters_setsDefaultProperties"/>
+  <testcase result="pass" name="constructor_givenParameters_setsProperties"/>
+  <testcase result="pass" name="setValue_givenNewValue_updatesValueAndEmitsSignal"/>
+  <testcase result="pass" name="setValue_givenSameValue_takesNoAction"/>
+  <testcase result="pass" name="jsonValue_whenDefaultValue_returnsJson"/>
+  <testcase result="pass" name="jsonValue_whenValueSet_returnsJson"/>
+  <testcase result="pass" name="update_whenPresentInJson_updatesValue"/>
+  <testcase result="pass" name="update_whenNotPresentInJson_updatesValueToDefault"/>
+  <testcase result="pass" name="toIso8601String_whenDefaultValue_returnsString"/>
+  <testcase result="pass" name="toIso8601String_whenValueSet_returnsString"/>
+  <testcase result="pass" name="toPrettyDateString_whenDefaultValue_returnsString"/>
+  <testcase result="pass" name="toPrettyDateString_whenValueSet_returnsString"/>
+  <testcase result="pass" name="toPrettyTimeString_whenDefaultValue_returnsString"/>
+  <testcase result="pass" name="toPrettyTimeString_whenValueSet_returnsString"/>
+  <testcase result="pass" name="toPrettyString_whenDefaultValue_returnsString"/>
+  <testcase result="pass" name="toPrettyString_whenValueSet_returnsString"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
