@@ -1,5 +1,7 @@
-import QtQuick 2.9
-import QtQuick.Window 2.2
+// En Qt 6 se recomienda omitir la versión en los imports (el motor resuelve
+// la versión compatible más reciente del módulo automáticamente).
+import QtQuick
+import QtQuick.Window
 
 Window {
     visible: true

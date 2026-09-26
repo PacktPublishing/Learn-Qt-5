@@ -1,4 +1,6 @@
-import QtQuick 2.9
+// En Qt 6 se recomienda omitir la versión en los imports: el motor resuelve
+// automáticamente la versión compatible más reciente del módulo.
+import QtQuick
 
 Item {
     Rectangle {
@@ -6,7 +8,7 @@ Item {
         color: "#f4c842"
         Text {
             anchors.centerIn: parent
-            text: "Splash View"
+            text: "Splash"
         }
     }
 }

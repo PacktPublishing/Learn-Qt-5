@@ -1,6 +1,17 @@
-import QtQuick 2.9
-import QtQuick.Window 2.2
-import QtQuick.Controls 2.2
+// MasterView.qml — Vista maestra migrada a Qt 6 (Capítulo 3).
+//
+// Cambios frente a la versión de Qt 5:
+//   * Imports sin número de versión (import QtQuick / QtQuick.Window /
+//     QtQuick.Controls): en Qt 6 es la forma recomendada.
+//   * Ya no existen las rutas "qrc:/views/XxxView.qml": al empaquetarse las
+//     vistas con qt_add_qml_module(), se referencian por el NOMBRE DEL TIPO
+//     ("DashboardView", "SplashView", ...), resueltas dentro del módulo CM.Views.
+//   * Los handlers de Connections usan la sintaxis moderna de funciones
+//     (function onGoXxx()), obligatoria desde Qt 6 para señales con argumentos.
+
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
 
 Window {
     visible: true
@@ -8,14 +19,16 @@ Window {
     height: 480
     title: qsTr("Client Management")
 
-    Component.onCompleted: contentFrame.replace("qrc:/views/DashboardView.qml");
+    // Equivalente a contentFrame.replace("qrc:/views/DashboardView.qml"):
+    // ahora se pasa el nombre del tipo QML registrado en el módulo.
+    Component.onCompleted: contentFrame.replace("DashboardView");
 
     Connections {
         target: masterController.ui_navigationController
-        onGoCreateClientView: contentFrame.replace("qrc:/views/CreateClientView.qml")
-        onGoDashboardView: contentFrame.replace("qrc:/views/DashboardView.qml")
-        onGoEditClientView: contentFrame.replace("qrc:/views/EditClientView.qml", {selectedClient: client})
-        onGoFindClientView: contentFrame.replace("qrc:/views/FindClientView.qml")
+        function onGoCreateClientView() { contentFrame.replace("CreateClientView") }
+        function onGoDashboardView()    { contentFrame.replace("DashboardView") }
+        function onGoEditClientView(client) { contentFrame.replace("EditClientView", {selectedClient: client}) }
+        function onGoFindClientView()   { contentFrame.replace("FindClientView") }
     }
 
     Rectangle {
@@ -52,7 +65,7 @@ Window {
             right: parent.right
             left: navigationBar.right
         }
-        initialItem: "qrc:/views/SplashView.qml"
+        initialItem: "SplashView"   // nombre de tipo del módulo CM.Views
         clip: true
     }
 }
